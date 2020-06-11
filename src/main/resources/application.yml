@@ -1,0 +1,6 @@
+# file application.yml
+graphql:
+  packages: "com.sashwat.project.entity"
+  subscriptions:
+    # Send a ka message every 1000 ms (1 second)
+    keepAliveInterval: 1000
