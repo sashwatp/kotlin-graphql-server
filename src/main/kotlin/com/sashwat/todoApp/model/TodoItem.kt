@@ -6,5 +6,5 @@ import com.expediagroup.graphql.annotations.GraphQLDescription
 data class TodoItem(
     val id: Long,
     val details: String,
-    val status: Status
+    val status: String
 )

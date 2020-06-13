@@ -24,6 +24,9 @@ dependencies {
     // graphql kotlin library dependency
     implementation("com.expediagroup", "graphql-kotlin-spring-server", "3.1.1")
 
+    // MongoDB Java driver
+    implementation("org.mongodb", "mongodb-driver-sync", "4.0.4")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
