@@ -18,8 +18,12 @@ repositories {
 }
 
 dependencies {
+    // Kotlin Dependency
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+    // graphql kotlin library dependency
     implementation("com.expediagroup", "graphql-kotlin-spring-server", "3.1.1")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }

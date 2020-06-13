@@ -25,7 +25,7 @@ implementation("com.expediagroup", "graphql-kotlin-spring-server", "3.1.1")
 ```kotlin
 # file application.yml
 graphql:
-  packages: "com.sashwat.project.entity"
+  packages: "com.sashwat.todoApp"
   subscriptions:
     # Send a ka message every 1000 ms (1 second)
     keepAliveInterval: 1000
@@ -33,16 +33,34 @@ graphql:
 
 ## 4. Add a Simple Query
 
+We have added two queries. 
+
+1. todoItems: This will return a list of todoItems
+2. todoItem: This will return a todoItem provided its id
+
+
 ```kotlin
-package com.sashwat.project.entity.query
+package com.sashwat.todoApp.query
 
 import com.expediagroup.graphql.spring.operations.Query
+import com.sashwat.todoApp.model.Status
+import com.sashwat.todoApp.model.TodoItem
 import org.springframework.stereotype.Component
 
-
 @Component
-class SimpleQuery: Query {
-    fun helloWorld() = "hello World!"
+class TodoItemQuery: Query {
+    fun todoItems(): List<TodoItem> {
+        return listOf()
+    }
+
+    fun todoItem(id: Long) : TodoItem {
+        return TodoItem(
+            1L,
+            "",
+            Status.ACTIVE
+        )
+    }
+
 }
 ```
 

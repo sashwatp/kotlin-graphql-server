@@ -1,4 +1,4 @@
-package com.sashwat.project.entity
+package com.sashwat.todoApp
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
