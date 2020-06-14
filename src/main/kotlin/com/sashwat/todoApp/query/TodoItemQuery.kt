@@ -15,12 +15,8 @@ class TodoItemQuery: Query {
         return todoItemDto.getTodoItemList()
     }
 
-    fun todoItem(id: Long) : TodoItem {
-        return TodoItem(
-            1L,
-            "",
-            Status.ACTIVE.value
-        )
+    fun todoItem(id: Long) : TodoItem? {
+        return todoItemDto.getTodoItem(id)
     }
 
 }

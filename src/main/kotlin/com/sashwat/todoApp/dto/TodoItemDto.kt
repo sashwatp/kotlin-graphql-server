@@ -23,6 +23,9 @@ class TodoItemDto() {
             MongoClientSettings.getDefaultCodecRegistry(),
             fromProviders(
                 PojoCodecProvider.builder()
+                    .conventions(
+                        listOf()
+                    )
                     .automatic(true)
                     .build()
             )
@@ -44,7 +47,10 @@ class TodoItemDto() {
     }
 
     fun getTodoItemList(): List<TodoItem> {
+        getCollection().find().forEach { todoItem -> println(todoItem) }
+
         return getCollection().find()
+
             .toList()
     }
 
