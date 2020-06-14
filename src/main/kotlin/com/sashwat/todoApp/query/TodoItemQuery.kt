@@ -4,6 +4,7 @@ import com.expediagroup.graphql.spring.operations.Query
 import com.sashwat.todoApp.dto.TodoItemDto
 import com.sashwat.todoApp.model.Status
 import com.sashwat.todoApp.model.TodoItem
+import org.litote.kmongo.Id
 import org.springframework.stereotype.Component
 
 @Component
